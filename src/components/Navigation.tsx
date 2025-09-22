@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import paragonLogo from "@/assets/paragon-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +24,11 @@ const Navigation = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>+91 98765 43210</span>
+              <span>07 35234211</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <span>info@paragonsolar.com</span>
+              <span>info@paragonsolarpower.com.au</span>
             </div>
           </div>
           <div className="hidden md:block">
@@ -42,12 +43,14 @@ const Navigation = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
+              <img 
+                src={paragonLogo} 
+                alt="Paragon Solar Power Logo" 
+                className="h-12 w-auto mr-3"
+              />
               <div>
                 <h1 className="text-xl font-bold text-primary">Paragon Solar Power</h1>
-                <p className="text-sm text-muted-foreground">Pvt Ltd</p>
+                <p className="text-sm text-muted-foreground">Pty Ltd</p>
               </div>
             </div>
 

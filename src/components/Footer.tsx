@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
+import paragonLogo from "@/assets/paragon-logo.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -49,17 +50,19 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mr-4">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
+              <img 
+                src={paragonLogo} 
+                alt="Paragon Solar Power Logo" 
+                className="h-16 w-auto mr-4"
+              />
               <div>
                 <h3 className="text-xl font-bold">Paragon Solar Power</h3>
-                <p className="text-sm opacity-80">Pvt Ltd</p>
+                <p className="text-sm opacity-80">Pty Ltd</p>
               </div>
             </div>
             
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Leading India's solar revolution with innovative, reliable, and affordable clean energy 
+              Leading Australia's solar revolution with innovative, reliable, and affordable clean energy 
               solutions. Join thousands of satisfied customers who've made the switch to solar.
             </p>
 
@@ -67,15 +70,19 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-3 text-accent" />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">07 35234211</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-3 text-accent" />
-                <span className="text-sm">info@paragonsolar.com</span>
+                <span className="text-sm">info@paragonsolarpower.com.au</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-3 text-accent mt-1 flex-shrink-0" />
-                <span className="text-sm">123 Solar Street, Green Park, Mumbai - 400001, Maharashtra</span>
+                <div className="text-sm space-y-1">
+                  <div><strong>QLD Head Office:</strong> Level 4, 339 Coronation Drive, Milton, QLD 4069</div>
+                  <div><strong>Victoria Office:</strong> 16 Cotham Rd, Kew VIC 3101</div>
+                  <div><strong>WA Office:</strong> Level 1, 162 Grand Boulevard, Joondalup WA 6027</div>
+                </div>
               </div>
             </div>
 
@@ -192,7 +199,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-primary-foreground/80 mb-4 md:mb-0">
-            © 2024 Paragon Solar Power Pvt Ltd. All rights reserved.
+            © 2024 Paragon Solar Power Pty Ltd. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6 text-sm">

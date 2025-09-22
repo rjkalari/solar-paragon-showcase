@@ -54,18 +54,18 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Visit Our Office",
-      content: "123 Solar Street, Green Park, Mumbai - 400001, Maharashtra, India",
+      title: "Visit Our Offices",
+      content: "QLD Head Office: Level 4, 339 Coronation Drive, Milton, QLD 4069",
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+91 98765 43210",
+      content: "07 35234211",
     },
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@paragonsolar.com",
+      content: "info@paragonsolarpower.com.au",
     },
     {
       icon: Clock,
@@ -117,7 +117,7 @@ const ContactSection = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+91 98765 43210"
+                      placeholder="07 35234211"
                       required
                     />
                   </div>
@@ -174,7 +174,7 @@ const ContactSection = () => {
                     type="button" 
                     variant="outline-solar" 
                     size="lg"
-                    onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+                    onClick={() => window.open("https://wa.me/61735234211", "_blank")}
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
                     WhatsApp
@@ -230,7 +230,7 @@ const ContactSection = () => {
                 </p>
                 <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white hover:text-secondary">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now: +91 98765 43210
+                  Call Now: 07 35234211
                 </Button>
               </CardContent>
             </Card>
