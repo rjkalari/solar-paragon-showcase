@@ -2,18 +2,19 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link, useLocation } from "react-router-dom";
 import paragonLogo from "@/assets/paragon-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Services" },
-    { href: "#products", label: "Products" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -42,7 +43,7 @@ const Navigation = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img 
                 src={paragonLogo} 
                 alt="Paragon Solar Power Logo" 
@@ -52,18 +53,21 @@ const Navigation = () => {
                 <h1 className="text-xl font-bold text-primary">Paragon Solar Power</h1>
                 <p className="text-sm text-muted-foreground">Pty Ltd</p>
               </div>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
-                  className="text-foreground hover:text-secondary transition-colors duration-300 font-medium"
+                  to={item.href}
+                  className={cn(
+                    "text-foreground hover:text-secondary transition-colors duration-300 font-medium",
+                    location.pathname === item.href && "text-secondary font-bold"
+                  )}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -98,14 +102,17 @@ const Navigation = () => {
         >
           <div className="container mx-auto px-4 py-4 space-y-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
-                className="block text-foreground hover:text-secondary transition-colors duration-300 font-medium py-2"
+                to={item.href}
+                className={cn(
+                  "block text-foreground hover:text-secondary transition-colors duration-300 font-medium py-2",
+                  location.pathname === item.href && "text-secondary font-bold"
+                )}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="flex flex-col space-y-2 pt-4">
               <Button variant="outline-solar" size="sm">
